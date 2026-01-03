@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://qoqlqyifuqrc"]
+[gd_scene load_steps=9 format=4 uid="uid://qoqlqyifuqrc"]
 
 [ext_resource type="PackedScene" uid="uid://bx32ytx8tpq5x" path="res://player.tscn" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cgnm3rlfbemln" path="res://assets/bg (Custom).png" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b7vb1ed1xxqhq" path="res://assets/tilemap.png" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://b4wanblfhrabt" path="res://collectible.tscn" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bwqsgfg5qe2do" path="res://assets/bg.png" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("3_lquwl")
@@ -479,3 +480,11 @@ tile_set = SubResource("TileSet_272bh")
 
 [node name="Collectible" parent="." instance=ExtResource("5_7mycd")]
 position = Vector2(1649, -18)
+
+[node name="Background" type="Parallax2D" parent="."]
+z_index = -1
+repeat_size = Vector2(1936, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(968, -101)
+texture = ExtResource("5_lquwl")
